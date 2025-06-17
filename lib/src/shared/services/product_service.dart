@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:in8shop_mobile_flutter/src/modules/product/models/product.dart';
+import 'package:in8shop_mobile_flutter/src/shared/models/product.dart';
 
 class ProductsService {
   final dio = Dio();

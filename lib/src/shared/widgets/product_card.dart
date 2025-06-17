@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:in8shop_mobile_flutter/src/modules/product/models/product.dart';
+import 'package:in8shop_mobile_flutter/src/shared/models/product.dart';
 import 'package:in8shop_mobile_flutter/src/shared/utils/format_price.dart';
 import 'package:in8shop_mobile_flutter/src/shared/utils/truncate_text.dart';
 

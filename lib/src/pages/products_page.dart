@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:in8shop_mobile_flutter/src/modules/product/components/product_search.dart';
-import 'package:in8shop_mobile_flutter/src/modules/product/models/product.dart';
 import 'package:in8shop_mobile_flutter/src/modules/product/pages/productpageitem.dart'
     as page;
-import 'package:in8shop_mobile_flutter/src/modules/product/service/product_service.dart';
-import 'package:in8shop_mobile_flutter/src/modules/product/widgets/product_card.dart';
+import 'package:in8shop_mobile_flutter/src/shared/components/product_search.dart';
+import 'package:in8shop_mobile_flutter/src/shared/models/product.dart';
+import 'package:in8shop_mobile_flutter/src/shared/services/product_service.dart';
+import 'package:in8shop_mobile_flutter/src/shared/widgets/product_card.dart';
 
 class ProductsPage extends StatefulWidget {
   const ProductsPage({super.key});

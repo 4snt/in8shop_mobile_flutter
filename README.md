@@ -49,6 +49,7 @@ Este repositório contém o **App Mobile do In8Shop**, desenvolvido em **Flutter
   - `CartProvider` com estado global
   - Adição e remoção de itens
   - Quantidade ajustável
+  - Persistencia local
 
 - **Detalhe do Produto**
 
@@ -99,20 +100,53 @@ flutter run
 
 ```text
 lib/
-├── src/
-│   ├── modules/
-│   │   ├── product/
-│   │   │   ├── models/        # Modelo Product
-│   │   │   ├── pages/         # products_page.dart, product_page_item.dart
-│   │   │   ├── components/    # product_search.dart, product_filter.dart
-│   │   │   └── widgets/       # product_card.dart
-│   │   └── cart/
-│   │       └── pages/         # cart_page.dart
-│   ├── shared/
-│   │   ├── providers/         # cart_provider.dart
-│   │   ├── theme/             # app_theme.dart, app_colors.dart
-│   │   └── utils/             # format_price.dart, truncate_text.dart
-│   └── pages/                 # home_page.dart
+├── main.dart
+└── src/
+    ├── pages/
+    │   ├── cart_page.dart
+    │   ├── home_page.dart
+    │   ├── login_page.dart
+    │   ├── product_page_item.dart
+    │   ├── products_page.dart
+    │   └── register_page.dart
+    │
+    └── shared/
+        ├── components/
+        │   ├── product_filter.dart
+        │   └── product_search.dart
+        │
+        ├── models/
+        │   └── product.dart
+        │
+        ├── providers/
+        │   ├── auth_provider.dart
+        │   └── cart_provider.dart
+        │
+        ├── services/
+        │   ├── api_client.dart
+        │   ├── auth_service.dart
+        │   ├── order_service.dart
+        │   └── product_service.dart
+        │
+        ├── theme/
+        │   ├── app_colors.dart
+        │   └── app_theme.dart
+        │
+        ├── utils/
+        │   ├── format_price.dart
+        │   ├── safe_area_wrapper.dart
+        │   ├── toast.dart
+        │   └── truncate_text.dart
+        │
+        └── widgets/
+            ├── cart_item.dart
+            ├── form_wrap.dart
+            └── product_card.dart
+
+assets/
+└── images/
+    ├── logo-square-light.png
+    └── placeholder.webp
 ```
 
 ---

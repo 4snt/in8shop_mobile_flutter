@@ -10,6 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  uuid: ^4.3.3
+  shared_preferences: ^2.2.2
   another_flushbar: ^1.12.30
   provider: ^6.1.1
   dio: ^5.4.0

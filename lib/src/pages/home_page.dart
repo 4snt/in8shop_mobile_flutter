@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:in8shop_mobile_flutter/src/modules/cart/pages/cartpage.dart';
-import 'package:in8shop_mobile_flutter/src/modules/product/pages/products_page.dart';
+import 'package:in8shop_mobile_flutter/src/pages/products_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

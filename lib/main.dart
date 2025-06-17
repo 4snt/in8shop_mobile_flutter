@@ -3,6 +3,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
 
 import 'src/pages/home_page.dart';
+import 'src/shared/providers/AuthProvider.dart';
 import 'src/shared/providers/cart_provider.dart';
 import 'src/shared/theme/app_theme.dart';
 
@@ -18,7 +19,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => CartProvider())],
+      providers: [
+        ChangeNotifierProvider(create: (_) => AuthProvider()..loadAuth()),
+        ChangeNotifierProvider(create: (_) => CartProvider()),
+      ],
       child: MaterialApp(
         title: 'In8Shop Mobile',
         debugShowCheckedModeBanner: false,

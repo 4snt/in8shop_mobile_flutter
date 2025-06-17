@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:in8shop_mobile_flutter/src/modules/product/models/product.dart';
-import 'package:in8shop_mobile_flutter/src/modules/product/service/product_service.dart';
+import 'package:in8shop_mobile_flutter/src/shared/models/product.dart';
+import 'package:in8shop_mobile_flutter/src/shared/services/product_service.dart';
 
 class ProductFilter extends StatefulWidget {
   final Function(List<Product> result, Map<String, dynamic> filters) onApply;
