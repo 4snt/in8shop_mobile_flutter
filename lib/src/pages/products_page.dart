@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:in8shop_mobile_flutter/src/modules/product/pages/productpageitem.dart'
-    as page;
+import 'package:in8shop_mobile_flutter/src/pages/productpageitem.dart' as page;
 import 'package:in8shop_mobile_flutter/src/shared/components/product_search.dart';
 import 'package:in8shop_mobile_flutter/src/shared/models/product.dart';
 import 'package:in8shop_mobile_flutter/src/shared/services/product_service.dart';

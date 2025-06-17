@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:in8shop_mobile_flutter/src/modules/cart/pages/cartpage.dart';
+import 'package:in8shop_mobile_flutter/src/pages/cartpage.dart';
 import 'package:in8shop_mobile_flutter/src/pages/products_page.dart';
+import 'package:in8shop_mobile_flutter/src/pages/userpage.dart'; // 🔥 importa aqui
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,7 +17,7 @@ class _HomePageState extends State<HomePage> {
     const ProductsPage(),
     const CartPage(),
     const Center(child: Text('📦 Meus Pedidos')),
-    const Center(child: Text('👤 Conta')),
+    const UserPage(), // 🔥 aqui coloca sua UserPage
   ];
 
   void _onItemTapped(int index) {
