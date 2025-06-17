@@ -1,0 +1,30 @@
+name: in8shop_mobile_flutter
+description: "In8Shop Mobile App"
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  another_flushbar: ^1.12.30
+  provider: ^6.1.1
+  dio: ^5.4.0
+  flutter_dotenv: ^5.1.0
+  cupertino_icons: ^1.0.8
+  intl: ^0.18.1
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - .env
