@@ -2,13 +2,13 @@
 
 **Parte 3 de 3 do Desafio Técnico da In8**
 
-Este repositório contém o **App Mobile do In8Shop**, desenvolvido em **Flutter**, utilizando **Provider** para gerenciamento de estado e integração com backend em **NestJS**.
+Este repositório contém o **App Mobile do In8Shop**, desenvolvido em **Flutter**, com gerenciamento de estado utilizando **Provider** e integração total com o backend em **NestJS**.
 
 ---
 
 ## 📝 Requisitos do Desafio
 
-### Itens obrigatórios (React/Flutter)
+### Itens obrigatórios (Flutter)
 
 | Requisito                                       | Implementado |
 | ----------------------------------------------- | :----------: |
@@ -17,10 +17,8 @@ Este repositório contém o **App Mobile do In8Shop**, desenvolvido em **Flutter
 | Busca de produtos                               |      ✔       |
 | Filtro de produtos (categoria, preço, desconto) |      ✔       |
 | Carrinho de compras (adicionar/remover)         |      ✔       |
-| Finalização da compra                           |      ❌      |
-| Registro de compras                             |      ❌      |
-
-> **Observação:** a funcionalidade de checkout e registro de pedidos será entregue em uma futura iteração.
+| Finalização da compra                           |      ✔       |
+| Registro de compras                             |      ✔       |
 
 ### Itens opcionais
 
@@ -34,132 +32,106 @@ Este repositório contém o **App Mobile do In8Shop**, desenvolvido em **Flutter
 
 ## ✨ Funcionalidades Entregues
 
-- **Catálogo de produtos**
-
-  - Integração com backend NestJS
-  - Endpoint unificado: `GET /api/products`
-
-- **Busca e filtros**
-
-  - Componente `SearchBarComponent`
-  - Filtros: provider, categoria, preço mínimo/máximo, desconto
-
-- **Carrinho de compras**
-
-  - `CartProvider` com estado global
-  - Adição e remoção de itens
-  - Quantidade ajustável
-  - Persistencia local
-
-- **Detalhe do Produto**
-
-  - Informações de preço, desconto e fornecedor
-  - Seletor de quantidade
-  - Adicionar e remover do carrinho
-
-- **App Responsivo**
-  - Compatível com Android e iOS
-  - Tema claro e escuro (`ThemeMode.system`)
+- ✅ **Catálogo de Produtos**
+- ✅ **Busca e Filtros**
+- ✅ **Carrinho de Compras**
+- ✅ **Finalização de Pedido (Checkout)**
+- ✅ **Confirmação de Pagamento**
+- ✅ **Tela "Meus Pedidos"**
+- ✅ **Login e Cadastro**
+- ✅ **App Responsivo**
 
 ---
 
 ## 🚀 Instalação & Execução
 
-1. **Clone o projeto**
+### 🔗 Clonar o projeto
 
 ```bash
 git clone <seu-repo-url>
-cd in8shop_mobile
+cd in8shop_mobile_flutter
 ```
 
-2. **Variáveis de ambiente**
+### 🔑 Configurar variáveis de ambiente
 
 Crie um arquivo `.env` na raiz:
 
 ```env
-API_URL=http://localhost:8080
-            OU
-API_URL= https://backend-in8-nest-production.up.railway.app
+API_URL=https://backend-in8-nest-production.up.railway.app
 ```
 
-3. **Instale dependências**
+### 📦 Instalar dependências
 
 ```bash
 flutter pub get
 ```
 
-4. **Execute o projeto**
+### ▶️ Executar o projeto
 
 ```bash
 flutter run
 ```
 
+### 🔥 Gerar APK
+
+```bash
+flutter build apk --release
+```
+
+O APK estará em:
+
+```bash
+build/app/outputs/flutter-apk/app-release.apk
+```
+
+### 🍏 Gerar para iOS
+
+```bash
+flutter build ios --release
+```
+
+> ⚠️ Necessário rodar em macOS com Xcode instalado.
+
 ---
 
 ## 🗂️ Estrutura do Projeto
 
-```text
-lib/
+```plaintext
+lib
 ├── main.dart
-└── src/
-    ├── pages/
-    │   ├── cart_page.dart
-    │   ├── home_page.dart
-    │   ├── login_page.dart
-    │   ├── product_page_item.dart
-    │   ├── products_page.dart
-    │   └── register_page.dart
-    │
-    └── shared/
-        ├── components/
-        │   ├── product_filter.dart
-        │   └── product_search.dart
-        │
-        ├── models/
-        │   └── product.dart
-        │
-        ├── providers/
-        │   ├── auth_provider.dart
-        │   └── cart_provider.dart
-        │
-        ├── services/
-        │   ├── api_client.dart
-        │   ├── auth_service.dart
-        │   ├── order_service.dart
-        │   └── product_service.dart
-        │
-        ├── theme/
-        │   ├── app_colors.dart
-        │   └── app_theme.dart
-        │
-        ├── utils/
-        │   ├── format_price.dart
-        │   ├── safe_area_wrapper.dart
-        │   ├── toast.dart
-        │   └── truncate_text.dart
-        │
-        └── widgets/
-            ├── cart_item.dart
-            ├── form_wrap.dart
-            └── product_card.dart
-
-assets/
-└── images/
-    ├── logo-square-light.png
-    └── placeholder.webp
+├── src
+│   ├── pages
+│   ├── shared
+│   │   ├── components
+│   │   ├── models
+│   │   ├── providers
+│   │   ├── services
+│   │   ├── theme
+│   │   ├── utils
+│   │   └── widgets
+assets
+├── fonts
+├── images
 ```
 
 ---
 
-## 🛠️ Scripts Úteis
+## ✅ Features Técnicas
 
-```bash
-flutter pub get      # Instalar dependências
-flutter run          # Executar app
-flutter build apk    # Gerar APK
-flutter build ios    # Gerar para iOS
-flutter analyze      # Analisar código
-```
+- Arquitetura limpa e modular
+- Provider para estado global
+- Persistência de sessão (token)
+- Toast customizado
+- API única para produtos de dois fornecedores
+
+---
+
+## 💡 Melhorias Futuras
+
+- Tela de detalhe do pedido
+- Histórico detalhado de produtos comprados
+- Controle de estoque
+- Melhorias visuais e UX
 
 ---
 
@@ -167,7 +139,11 @@ flutter analyze      # Analisar código
 
 1. Fork & clone este repositório
 2. Crie uma branch `feature/sua-feature`
-3. Codifique e execute `flutter analyze`
-4. Faça commit e envie PR para revisão
+3. Execute `flutter analyze`
+4. Commit e envie um PR 🚀
 
-**Desenvolvido por Murilo Santiago**
+---
+
+## 🧠 Desenvolvido por
+
+**Murilo Santiago**
