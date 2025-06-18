@@ -40,4 +40,25 @@ class Toast {
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
     ).show(context);
   }
+
+  // ✅ Toasts prontos
+  static void success(BuildContext context, String message) {
+    show(
+      context,
+      message: message,
+      background: Colors.green,
+      textColor: Colors.white,
+      icon: Icons.check_circle_outline,
+    );
+  }
+
+  static void error(BuildContext context, String message) {
+    show(
+      context,
+      message: message,
+      background: Colors.red,
+      textColor: Colors.white,
+      icon: Icons.error_outline,
+    );
+  }
 }

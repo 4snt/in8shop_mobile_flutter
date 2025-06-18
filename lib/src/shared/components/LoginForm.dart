@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/AuthProvider.dart';
+import '../utils/toast.dart';
 import './RegisterForm.dart';
 
 class LoginForm extends StatefulWidget {
@@ -24,10 +26,30 @@ class _LoginFormState extends State<LoginForm> {
       try {
         final auth = Provider.of<AuthProvider>(context, listen: false);
         await auth.login(email: email, password: password);
-      } catch (e) {
-        ScaffoldMessenger.of(
+
+        Toast.show(
           context,
-        ).showSnackBar(SnackBar(content: Text(e.toString())));
+          message: 'Login realizado com sucesso!',
+          icon: Icons.check_circle_outline,
+          background: Colors.green,
+          textColor: Colors.white,
+          iconColor: Colors.white,
+        );
+
+        SchedulerBinding.instance.addPostFrameCallback((_) {
+          Navigator.of(
+            context,
+          ).pop(); // Volta pra tela anterior (ex.: Checkout ou Carrinho)
+        });
+      } catch (e) {
+        Toast.show(
+          context,
+          message: e.toString().replaceAll('Exception: ', ''),
+          icon: Icons.error_outline,
+          background: Colors.red.shade700,
+          textColor: Colors.white,
+          iconColor: Colors.white,
+        );
       } finally {
         setState(() => isLoading = false);
       }

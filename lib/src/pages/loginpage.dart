@@ -60,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
                         try {
                           await auth.login(email: email, password: password);
                           if (mounted) {
-                            Navigator.of(context).pushReplacementNamed('/home');
+                            Navigator.of(context).pushReplacementNamed('/cart');
                           }
                         } catch (e) {
                           ScaffoldMessenger.of(

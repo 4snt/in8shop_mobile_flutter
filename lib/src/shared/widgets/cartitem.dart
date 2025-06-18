@@ -4,13 +4,13 @@ import 'package:in8shop_mobile_flutter/src/shared/utils/format_price.dart';
 class CartItem extends StatelessWidget {
   final dynamic product;
   final int quantity;
-  final VoidCallback onRemove;
+  final VoidCallback? onRemove;
 
   const CartItem({
     super.key,
     required this.product,
     required this.quantity,
-    required this.onRemove,
+    this.onRemove,
   });
 
   @override
@@ -38,10 +38,12 @@ class CartItem extends StatelessWidget {
         subtitle: Text(
           'Qtd: $quantity\n${formatPrice(product.price * (1 - product.discountValue))}',
         ),
-        trailing: IconButton(
-          icon: const Icon(Icons.delete_outline),
-          onPressed: onRemove,
-        ),
+        trailing: onRemove != null
+            ? IconButton(
+                icon: const Icon(Icons.delete_outline),
+                onPressed: onRemove,
+              )
+            : null, // 🔥 Se não tiver função, não mostra o botão
       ),
     );
   }

@@ -53,7 +53,7 @@ class AuthService {
       );
 
       return res.data;
-    } on DioException catch (e) {
+    } on DioException {
       return {};
     }
   }
