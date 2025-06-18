@@ -57,7 +57,9 @@ cd in8shop_mobile_flutter
 Crie um arquivo `.env` na raiz:
 
 ```env
-API_URL=https://backend-in8-nest-production.up.railway.app
+API_URL=https://backend-in8-nest-production.up.railway.app <= recomendo usar esse para  facilitar os testes
+OU
+API_URL=https://seu.ipv4:8080/
 ```
 
 ### 📦 Instalar dependências
