@@ -48,7 +48,7 @@ Este repositório contém o **App Mobile do In8Shop**, desenvolvido em **Flutter
 ### 🔗 Clonar o projeto
 
 ```bash
-git clone <seu-repo-url>
+git clone <https://github.com/4snt/in8shop_mobile_flutter>
 cd in8shop_mobile_flutter
 ```
 
@@ -99,21 +99,62 @@ flutter build ios --release
 ## 🗂️ Estrutura do Projeto
 
 ```plaintext
-lib
-├── main.dart
-├── src
-│   ├── pages
-│   ├── shared
-│   │   ├── components
-│   │   ├── models
-│   │   ├── providers
-│   │   ├── services
-│   │   ├── theme
-│   │   ├── utils
-│   │   └── widgets
-assets
-├── fonts
-├── images
+\LIB
+|   main.dart
+|
+\---src
+    +---pages
+    |       CartPage.dart
+    |       checkoutpage.dart
+    |       home_page.dart
+    |       loginpage.dart
+    |       MyOrdersPage.dart
+    |       PaymentPage.dart
+    |       ProductPageItem.dart
+    |       products_page.dart
+    |       register_page.dart
+    |       userpage.dart
+    |
+    \---shared
+        +---components
+        |       LoginForm.dart
+        |       product_filter.dart
+        |       product_search.dart
+        |       RegisterForm.dart
+        |
+        +---models
+        |       product.dart
+        |       UserModel.dart
+        |
+        +---providers
+        |       AuthProvider.dart
+        |       cart_provider.dart
+        |
+        +---services
+        |       api_client.dart
+        |       auth_service.dart
+        |       orderservice.dart
+        |       product_service.dart
+        |
+        +---theme
+        |       app_colors.dart
+        |       app_theme.dart
+        |
+        +---utils
+        |       format_price.dart
+        |       SafeAreaWrapper.dart
+        |       toast.dart
+        |       truncate_text.dart
+        |
+        \---widgets
+                cartitem.dart
+                FormWrap.dart
+                product_card.dart
+\ASSETS
+\---images
+        logo-square-light.png
+        placeholder.webp
+
 ```
 
 ---
